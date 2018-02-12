@@ -7,6 +7,7 @@
 * Styled Components
 * Jest / Enzyme
 * Babel / Webpack
+* ESLint / Stylelint / Lint-staged
 * ES6+ syntax
 
 #### Available npm scripts
