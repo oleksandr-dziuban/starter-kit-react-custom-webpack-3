@@ -1,4 +1,4 @@
-const allFilmsQueryConfig = {
+const allCountriesQueryConfig = {
   props: ({ data: { countries = {} } }) => ({
     countries: (countries.edges || []).map(({ node: { id, name } }) => ({
       id,
@@ -7,4 +7,4 @@ const allFilmsQueryConfig = {
   }),
 };
 
-export default allFilmsQueryConfig;
+export default allCountriesQueryConfig;

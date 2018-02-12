@@ -10,8 +10,8 @@ import {
   CountryItem,
   BackButton,
 } from './Example.styled';
-import allFilmsQueryConfig from './graphql/config';
-import { allFilmsQuery } from './graphql/queries';
+import allCountriesQueryConfig from './graphql/config';
+import allCountriesQuery from './graphql/allCountries.graphql';
 
 
 export class Example extends Component {
@@ -46,5 +46,5 @@ Example.propTypes = {
 };
 
 export default compose(
-  graphql(allFilmsQuery, allFilmsQueryConfig),
+  graphql(allCountriesQuery, allCountriesQueryConfig),
 )(Example);

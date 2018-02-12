@@ -1,6 +1,4 @@
-import gql from 'graphql-tag';
-
-export const allFilmsQuery = gql`query {
+query {
   countries {
     edges {
       node {
@@ -10,4 +8,3 @@ export const allFilmsQuery = gql`query {
     }
   }
 }
-`;
