@@ -1,0 +1,105 @@
+/* Global typography */
+
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+html {
+  font-size: 62.5%;
+}
+
+body,
+p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.6rem;
+  font-weight: lighter;
+  line-height: 1.8rem;
+  -webkit-font-smoothing: subpixel-antialiased;
+  color: #52585d;
+}
+
+p {
+  margin: 1rem 0;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 2rem 0 1rem;
+  text-rendering: optimizeLegibility;
+}
+
+h1 {
+  color: #009cde;
+  font-size: 3rem;
+  font-weight: lighter;
+  line-height: 3rem;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 1.4rem;
+  line-height: 1.4rem;
+}
+
+h2,
+h3 {
+  color: #333;
+  font-weight: lighter;
+}
+
+h3 {
+  font-size: 2rem;
+  line-height: 2rem;
+}
+
+h4 {
+  font-size: 1.4rem;
+  line-height: 1.4rem;
+}
+
+h4,
+h5 {
+  color: #333;
+  font-weight: 700;
+}
+
+h5 {
+  font-size: 1.2rem;
+  line-height: 1.2rem;
+  text-transform: uppercase;
+}
+
+h6 {
+  color: #333;
+  font-size: 1.6rem;
+  line-height: 1.6rem;
+}
+
+h6,
+p {
+  font-weight: lighter;
+}
+
+a {
+  color: #009cde;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+a:active,
+a:focus,
+a:hover {
+  color: #0085bd;
+  text-decoration: underline;
+}
+
+small {
+  font-weight: lighter;
+  font-size: 1.2rem;
+}

@@ -1,0 +1,38 @@
+{
+  "presets": [
+    "env",
+    "react",
+    ["es2015", { "modules": false }]
+  ],
+  "plugins": [
+    "react-hot-loader/babel",
+    "inline-dotenv",
+    "transform-runtime",
+    "transform-class-properties",
+    "transform-decorators-legacy",
+    "transform-object-rest-spread",
+    ["styled-components", { "ssr": true, "displayName": true, "preprocess": false }],
+    "babel-plugin-inline-import-graphql-ast",
+    ["module-resolver", {
+      "root": ["./src"],
+      "alias": {
+        "styles": "./styles"
+      }
+    }]
+  ],
+
+  "env": {
+    "test": {
+      "plugins": [
+        "react-hot-loader/babel",
+        "inline-dotenv",
+        "transform-runtime",
+        "transform-class-properties",
+        "transform-decorators-legacy",
+        "transform-object-rest-spread",
+        ["styled-components", { "ssr": true, "displayName": true, "preprocess": false }],
+        "babel-plugin-inline-import-graphql-ast"
+      ]
+    }
+  }
+}
