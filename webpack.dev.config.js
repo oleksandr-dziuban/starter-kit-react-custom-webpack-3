@@ -2,6 +2,7 @@ const webpack = require('webpack');
 const path = require('path');
 const loaders = require('./webpack.loaders');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const StyleLintPlugin = require('stylelint-webpack-plugin');
 const DashboardPlugin = require('webpack-dashboard/plugin');
 
 const HOST = process.env.HOST || 'localhost';
@@ -16,13 +17,13 @@ module.exports = {
   output: {
     publicPath: '/',
     path: path.join(__dirname, 'static'),
-    filename: 'bundle.js'
+    filename: 'bundle.js',
   },
   resolve: {
-    extensions: ['.js', '.jsx']
+    extensions: ['.js', '.jsx'],
   },
   module: {
-    loaders
+    loaders,
   },
   devServer: {
     contentBase: './static',
@@ -31,18 +32,22 @@ module.exports = {
     inline: true,
     historyApiFallback: true,
     port: PORT,
-    host: HOST
+    host: HOST,
   },
   plugins: [
     new webpack.NoEmitOnErrorsPlugin(),
     new webpack.NamedModulesPlugin(),
     new webpack.HotModuleReplacementPlugin(),
     new DashboardPlugin(),
+    new StyleLintPlugin({
+      emitErrors: false,
+      files: ['./src/**/*.js'],
+    }),
     new HtmlWebpackPlugin({
       template: './static/index.html',
       files: {
-        js: [ "bundle.js"],
-      }
+        js: ['bundle.js'],
+      },
     }),
-  ]
+  ],
 };

@@ -12,39 +12,39 @@ module.exports = {
   output: {
     publicPath: './',
     path: path.join(__dirname, 'build'),
-    filename: '[chunkhash].js'
+    filename: '[chunkhash].js',
   },
   resolve: {
-    extensions: ['.js', '.jsx']
+    extensions: ['.js', '.jsx'],
   },
   module: {
-    loaders
+    loaders,
   },
   plugins: [
     new WebpackCleanupPlugin(),
     new webpack.DefinePlugin({
       'process.env': {
-        NODE_ENV: '"production"'
-      }
+        NODE_ENV: '"production"',
+      },
     }),
     new CopyWebpackPlugin([{
       from: 'static',
-      to: ''
+      to: '',
     }]),
     new webpack.optimize.UglifyJsPlugin({
       compress: {
         warnings: false,
         screw_ie8: true,
         drop_console: true,
-        drop_debugger: true
-      }
+        drop_debugger: true,
+      },
     }),
     new webpack.optimize.OccurrenceOrderPlugin(),
     new HtmlWebpackPlugin({
       template: './static/index.html',
       files: {
         js: ['bundle.js'],
-      }
-    })
-  ]
+      },
+    }),
+  ],
 };
