@@ -87,7 +87,7 @@
     "lint:js": "eslint \"./src/**/*.js\"",
     "lint:css": "stylelint \"./src/**\" --config ./.stylelintrc",
     "serve": "serve ./build --open",
-    "fetch:schema": "node ./config/graphql/fetchSchema.js",
+    "fetch:schema": "babel-node ./config/graphql/fetchSchema.js --plugins inline-dotenv",
     "precommit": "npm run test && lint-staged"
   },
   "lint-staged": {
