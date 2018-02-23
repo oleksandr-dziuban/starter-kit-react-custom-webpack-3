@@ -1,0 +1,25 @@
+{
+  "schema": {
+    "request": {
+      "url" : "https://portal.ehri-project.eu/api/graphql",
+      "method" : "POST",
+      "postIntrospectionQuery" : true,
+      "options" : {
+        "headers": {
+          "user-agent" : "JS GraphQL"
+        }
+      }
+    }
+  },
+  "endpoints" : [
+    {
+      "name": "Default",
+      "url": "https://portal.ehri-project.eu/api/graphql",
+      "options" : {
+        "headers": {
+          "user-agent" : "JS GraphQL"
+        }
+      }
+    }
+  ]
+}

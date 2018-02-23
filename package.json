@@ -51,7 +51,6 @@
     "eslint-plugin-jsx-a11y": "^6.0.2",
     "eslint-plugin-react": "^7.6.1",
     "extract-text-webpack-plugin": "^3.0.2",
-    "fetch-graphql-schema": "^0.2.1",
     "file-loader": "^1.1.6",
     "html-webpack-plugin": "^2.30.1",
     "husky": "^0.14.3",
@@ -87,7 +86,6 @@
     "lint:js": "eslint \"./src/**/*.js\"",
     "lint:css": "stylelint \"./src/**\" --config ./.stylelintrc",
     "serve": "serve ./build --open",
-    "fetch:schema": "babel-node ./config/graphql/fetchSchema.js --plugins inline-dotenv",
     "precommit": "npm run test && lint-staged"
   },
   "lint-staged": {
