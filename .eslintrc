@@ -25,7 +25,7 @@
     "no-duplicate-imports": "error",
     "no-inline-comments": "error",
     "no-lonely-if": "error",
-    "no-magic-numbers": ["error", { "enforceConst": true }],
+    "no-magic-numbers": ["error", { "enforceConst": true, "ignore": [0, 1, -1] }],
     "no-multi-spaces": "error",
     "no-param-reassign": ["error"],
     "no-plusplus": "error",

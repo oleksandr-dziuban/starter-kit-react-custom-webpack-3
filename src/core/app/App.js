@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Redirect, Switch } from 'react-router-dom';
 import { ApolloProvider } from 'react-apollo';
+import { Provider } from 'react-redux';
 
 import client from '../services/configureApollo';
 import configureStore from '../services/configureStore';
 
-import Home from '../../features/Home';
-import PageExample from '../../features/Example';
+import ExampleRedux from '../../features/example-redux';
+import ExampleGraphql from '../../features/example-graphql';
 import { AppRoot } from './App.styled';
 
 import '../../styles/normalize.css';
@@ -18,23 +19,28 @@ const store = configureStore();
 export class App extends Component {
   render() {
     return (
-      <ApolloProvider
-        client={client}
-        store={store}
-      >
-        <Router>
-          <AppRoot>
-            <Route
-              component={Home}
-              exact
-              path='/'
-            />
-            <Route
-              component={PageExample}
-              path='/page-example'
-            />
-          </AppRoot>
-        </Router>
+      <ApolloProvider client={client}>
+        <Provider store={store}>
+          <Router>
+            <AppRoot>
+              <Switch>
+                <Route
+                  component={ExampleRedux}
+                  exact
+                  path='/example-redux'
+                />
+                <Route
+                  component={ExampleGraphql}
+                  path='/example-graphql'
+                />
+                <Redirect
+                  from='/'
+                  to='/example-redux'
+                />
+              </Switch>
+            </AppRoot>
+          </Router>
+        </Provider>
       </ApolloProvider>
     );
   }

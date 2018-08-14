@@ -14,6 +14,7 @@ export const HomeTitle = styled.p`
   font-weight: bold;
   color: #09adb5;
   margin-bottom: 2rem;
+  line-height: 4rem;
 `;
 
 export const HomeRouterLink = styled.p`

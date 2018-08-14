@@ -52,28 +52,38 @@ exports[`<App/> renders 1`] = `
       "watchQuery": [Function],
     }
   }
-  store={
-    Object {
-      "dispatch": [Function],
-      "getState": [Function],
-      "replaceReducer": [Function],
-      "subscribe": [Function],
-      Symbol(observable): [Function],
-    }
-  }
 >
-  <BrowserRouter>
-    <Appstyled__AppRoot>
-      <Route
-        component={[Function]}
-        exact={true}
-        path="/"
-      />
-      <Route
-        component={[Function]}
-        path="/page-example"
-      />
-    </Appstyled__AppRoot>
-  </BrowserRouter>
+  <Provider
+    store={
+      Object {
+        "dispatch": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+        Symbol(observable): [Function],
+      }
+    }
+  >
+    <BrowserRouter>
+      <Appstyled__AppRoot>
+        <Switch>
+          <Route
+            component={[Function]}
+            exact={true}
+            path="/example-redux"
+          />
+          <Route
+            component={[Function]}
+            path="/example-graphql"
+          />
+          <Redirect
+            from="/"
+            push={false}
+            to="/example-redux"
+          />
+        </Switch>
+      </Appstyled__AppRoot>
+    </BrowserRouter>
+  </Provider>
 </ApolloProvider>
 `;
