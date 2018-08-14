@@ -6,6 +6,7 @@ const WebpackCleanupPlugin = require('webpack-cleanup-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
+  mode: 'production',
   entry: [
     './src/index.js',
   ],
@@ -47,4 +48,9 @@ module.exports = {
       },
     }),
   ],
+  optimization: {
+    splitChunks: {
+      chunks: 'all',
+    },
+  },
 };

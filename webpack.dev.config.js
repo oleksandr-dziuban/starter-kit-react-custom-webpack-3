@@ -1,6 +1,6 @@
 const webpack = require('webpack');
 const path = require('path');
-const loaders = require('./webpack.loaders');
+const rules = require('./webpack.loaders');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const StyleLintPlugin = require('stylelint-webpack-plugin');
 const DashboardPlugin = require('webpack-dashboard/plugin');
@@ -9,6 +9,7 @@ const HOST = process.env.HOST || 'localhost';
 const PORT = process.env.PORT || '3000';
 
 module.exports = {
+  mode: 'development',
   entry: [
     'react-hot-loader/patch',
     './src/index.js',
@@ -23,7 +24,7 @@ module.exports = {
     extensions: ['.js', '.jsx'],
   },
   module: {
-    loaders,
+    rules,
   },
   devServer: {
     contentBase: './static',
@@ -50,4 +51,9 @@ module.exports = {
       },
     }),
   ],
+  optimization: {
+    splitChunks: {
+      chunks: 'all',
+    },
+  },
 };
