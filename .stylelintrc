@@ -11,9 +11,7 @@
         "ignorePseudoClasses": ["/global/"]
       }
     ],
-    "comment-empty-line-before": [
-      "never"
-    ],
+    "comment-empty-line-before": ["never"],
     "no-eol-whitespace": [
       true, {
         "ignore": ["empty-lines"]
