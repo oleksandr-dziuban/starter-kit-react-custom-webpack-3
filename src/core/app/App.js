@@ -2,15 +2,16 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { ApolloProvider } from 'react-apollo';
 
-import client from '../app/configureApollo';
-import configureStore from '../app/configureStore';
+import client from '../services/configureApollo';
+import configureStore from '../services/configureStore';
 
-import Home from '../modules/Home';
-import PageExample from '../modules/Example';
+import Home from '../../features/Home';
+import PageExample from '../../features/Example';
 import { AppRoot } from './App.styled';
 
-import '../styles/normalize.css';
-import '../styles/typography.css';
+import '../../styles/normalize.css';
+import '../../styles/typography.css';
+
 
 const store = configureStore();
 
