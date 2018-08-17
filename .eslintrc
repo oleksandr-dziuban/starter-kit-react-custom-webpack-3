@@ -10,6 +10,11 @@
       "experimentalObjectRestSpread": true
     }
   },
+  "settings": {
+    "react": {
+      "version": "16.4.2"
+    }
+  },
   "rules": {
     "linebreak-style": ["error", "unix"],
     "eol-last": ["error", "always"],
