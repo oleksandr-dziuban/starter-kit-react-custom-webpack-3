@@ -1,6 +1,6 @@
 const webpack = require('webpack');
 const path = require('path');
-const loaders = require('./webpack.loaders');
+const rules = require('./webpack.rules');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const WebpackCleanupPlugin = require('webpack-cleanup-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
@@ -19,7 +19,7 @@ module.exports = {
     extensions: ['.js', '.jsx'],
   },
   module: {
-    loaders,
+    rules,
   },
   plugins: [
     new WebpackCleanupPlugin(),

@@ -1,6 +1,6 @@
 const webpack = require('webpack');
 const path = require('path');
-const rules = require('./webpack.loaders');
+const rules = require('./webpack.rules');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const StyleLintPlugin = require('stylelint-webpack-plugin');
 const DashboardPlugin = require('webpack-dashboard/plugin');

@@ -4,7 +4,7 @@
 
 * React / React Router / Redux / Redux Form
 * Apollo Client / GraphQL
-* Styled Components
+* CSS Modules
 * Jest / Enzyme
 * Babel / Webpack
 * ESLint / Stylelint / Lint-staged

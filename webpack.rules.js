@@ -12,8 +12,13 @@ module.exports = [
     loader: 'babel-loader',
   },
   {
-    test: /\.s?css$/,
-    loaders: ['style-loader', 'sass-loader', 'css-loader?modules=true&importLoaders=1'],
+    test: /\.css$/,
+    loaders: ['style-loader', 'css-loader?importLoaders=1'],
+    exclude: ['node_modules'],
+  },
+  {
+    test: /\.scss$/,
+    loaders: ['style-loader', 'css-loader?modules=true&importLoaders=1', 'sass-loader'],
     exclude: ['node_modules'],
   },
   {
