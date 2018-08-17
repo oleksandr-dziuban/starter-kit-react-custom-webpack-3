@@ -17,6 +17,7 @@ exports[`<App/> renders 1`] = `
         },
         "optimistic": Array [],
         "silenceBroadcast": false,
+        "typenameDocumentCache": WeakMap {},
         "watches": Array [],
       },
       "defaultOptions": Object {},
@@ -45,10 +46,11 @@ exports[`<App/> renders 1`] = `
           },
           "optimistic": Array [],
           "silenceBroadcast": false,
+          "typenameDocumentCache": WeakMap {},
           "watches": Array [],
         },
       },
-      "version": "2.2.3",
+      "version": "2.3.8",
       "watchQuery": [Function],
     }
   }
