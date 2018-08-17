@@ -11,7 +11,7 @@
     "transform-class-properties",
     "transform-decorators-legacy",
     "transform-object-rest-spread",
-    "babel-plugin-inline-import-graphql-ast",
+    "babel-plugin-import-graphql",
     ["module-resolver", {
       "root": ["./src"],
       "alias": {
@@ -29,7 +29,7 @@
         "transform-class-properties",
         "transform-decorators-legacy",
         "transform-object-rest-spread",
-        "babel-plugin-inline-import-graphql-ast"
+        "babel-plugin-import-graphql"
       ]
     }
   }
