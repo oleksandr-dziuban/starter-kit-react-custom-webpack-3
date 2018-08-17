@@ -8,7 +8,7 @@ import configureStore from '../services/configureStore';
 
 import ExampleRedux from '../../features/example-redux';
 import ExampleGraphql from '../../features/example-graphql';
-import { AppRoot } from './App.styled';
+import styles from './component.scss';
 
 import '../../styles/normalize.css';
 import '../../styles/typography.css';
@@ -16,13 +16,13 @@ import '../../styles/typography.css';
 
 const store = configureStore();
 
-export class App extends Component {
+class App extends Component {
   render() {
     return (
       <ApolloProvider client={client}>
         <Provider store={store}>
           <Router>
-            <AppRoot>
+            <main className={styles.root}>
               <Switch>
                 <Route
                   component={ExampleRedux}
@@ -38,7 +38,7 @@ export class App extends Component {
                   to='/example-redux'
                 />
               </Switch>
-            </AppRoot>
+            </main>
           </Router>
         </Provider>
       </ApolloProvider>

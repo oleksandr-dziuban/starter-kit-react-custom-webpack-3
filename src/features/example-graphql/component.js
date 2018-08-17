@@ -1,27 +1,32 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
-import {
-  BackButton, CountryItem, CountryList, ExampleRoot, ExampleTitle,
-} from './component.styled';
+import styles from './component.scss';
 
 
 const ExampleGraphql = (props) => (
-  <ExampleRoot>
-    <ExampleTitle>
+  <main className={styles.root}>
+    <p className={styles.title}>
       Data fetching example
-    </ExampleTitle>
-    <CountryList>
+    </p>
+    <ul className={styles.list}>
       {props.countries.map(({ id, name }) => (
-        <CountryItem key={id}>
+        <li
+          className={styles.item}
+          key={id}
+        >
           {name}
-        </CountryItem>
+        </li>
       ))}
-    </CountryList>
-    <BackButton to='/'>
+    </ul>
+    <Link
+      className={styles.backBtn}
+      to='/'
+    >
       Back
-    </BackButton>
-  </ExampleRoot>
+    </Link>
+  </main>
 );
 
 ExampleGraphql.propTypes = {

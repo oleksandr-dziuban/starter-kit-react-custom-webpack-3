@@ -2,9 +2,9 @@ import React, { Component, Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
-import homeLogo from '../../styles/icons/starter-kit.svg';
 import { TIME_INTERVAL } from './constants';
-import { HomeLogo, HomeMessage, HomeTitle, HomeRouterLink } from './component.styled';
+import homeLogo from '../../styles/icons/starter-kit.svg';
+import styles from './component.scss';
 
 
 class ExampleRedux extends Component {
@@ -29,22 +29,23 @@ class ExampleRedux extends Component {
   render() {
     return (
       <Fragment>
-        <HomeLogo
+        <img
           alt='Starter Kit Icon'
+          className={styles.logo}
           src={homeLogo}
         />
-        <HomeMessage>
-          <HomeTitle>
+        <section className={styles.message}>
+          <p className={styles.title}>
             You are ready to build an application.
             <br />
             Current time is { this.props.date }
-          </HomeTitle>
-          <HomeRouterLink>
+          </p>
+          <p className={styles.link}>
             <Link to='/example-graphql'>
               Click here
             </Link> to check Router and Data fetching
-          </HomeRouterLink>
-        </HomeMessage>
+          </p>
+        </section>
       </Fragment>
     );
   }
